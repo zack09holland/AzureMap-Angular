@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import * as atlas from 'azure-maps-control';
-// import * as atlas from 'azure-maps-drawing-tools';
+// import * as atlas from 'azure-maps-control';
+import {Map,AuthenticationType} from 'azure-maps-control';
+import * as atlas from 'azure-maps-drawing-tools';
 // import * as atlas from 'azure-maps-spatial-io';
+declare const addControls: any;
 
 
 @Component({
@@ -25,13 +27,13 @@ export class AzureMapComponent implements OnInit {
 
   ngOnInit() {
     //Initialize a map instance.
-    this.map = new atlas.Map('mapContainer', {
+    this.map = new Map('mapContainer', {
       center: [-122.33, 47.6],
       zoom: 12,
       view: 'Auto',
 
       authOptions: {
-        authType: 'subscriptionKey',
+        authType: AuthenticationType.subscriptionKey,
         subscriptionKey: this.key
       }
     });
@@ -45,13 +47,15 @@ export class AzureMapComponent implements OnInit {
       //   position: [0, 0]
       // }));
       //Create an instance of the drawing manager and display the drawing toolbar.
-      // drawingManager = new atlas.drawing.DrawingManager(this.map, {
-      //   toolbar: new atlas.control.DrawingToolbar({
-      //     position: 'top-left',
-      //     style: 'light'
-      //   })
-      // });
+      this.drawingManager = new atlas.drawing.DrawingManager(this.map, {
+        toolbar: new atlas.control.DrawingToolbar({
+          position: 'top-left',
+          // style: 'light'
+        })
+      });
     });
+
+    addControls()
   }
 
 }
