@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@acaisoft/angular-azure-maps": "^1.0.0",
     "@angular/animations": "~9.0.6",
     "@angular/common": "~9.0.6",
     "@angular/compiler": "~9.0.6",
@@ -22,6 +23,7 @@
     "azure-maps-control": "^2.0.25",
     "azure-maps-drawing-tools": "^0.1.4",
     "azure-maps-spatial-io": "^0.1.1",
+    "core-js": "^3.6.4",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

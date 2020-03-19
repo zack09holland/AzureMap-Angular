@@ -5,22 +5,25 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
 import { AzureMapComponent } from './azureMap/azureMap.component';
+
+// import {AmModule, LoadMapService} from "@acaisoft/angular-azure-maps";
+// import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
-    ])
+    // RouterModule.forRoot([
+    //   { path: '', component: ProductListComponent },
+    // ])
   ],
   declarations: [
+    // DashboardComponent,
     AppComponent,
     TopBarComponent,
-    ProductListComponent,
     AzureMapComponent
   ],
+  providers: [],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -29,7 +29,7 @@
               "node_modules/azure-maps-drawing-tools/dist/atlas-drawing.min.css"
             ],
             "scripts": [
-              "src/assets/js/mapSearch.js",
+              "src/assets/js/addControls.js",
               "node_modules/azure-maps-control/dist/atlas.min.js",
               "node_modules/azure-maps-drawing-tools/dist/atlas-drawing.min.js"
               ]
